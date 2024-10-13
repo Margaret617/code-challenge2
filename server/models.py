@@ -53,8 +53,6 @@ class Pizza(db.Model, SerializerMixin):
     # add relationship
     restaurant_pizzas = db.relationship('RestaurantPizza', back_populates='pizza')
 
-    # add serialization rules
-
     def __repr__(self):
         return f'<Pizza {self.name}, {self.ingredients}>'
 
